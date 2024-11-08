@@ -1,0 +1,38 @@
+<style>
+a {
+  text-decoration: none;
+  color: black;
+}
+</style>
+<h2 class="mt-3 m-3"><a href="/index">Edit User</a></h2>
+
+<div class="container">
+ {{#each users}}
+	<form action="" method="POST">
+        <input type="text" hidden value="{{id}}">
+        <div class="mb-3">
+          <label class="form-label">Name:</label>
+          <input type="text" name="nameu" value="{{nameu}}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Last Name:</label>
+            <input type="text" name="lnameu" value="{{lnameu}}" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" value="{{email}}" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mobile</label>
+            <input type="number" name="mobile" value="{{mobile}}" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Birth</label>
+            <input type="date" name="birth" value="{{moment birth "YYYY-MM-DD"}}" class="form-control" required>
+          </div>
+
+       
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+          {{/each}}
+</div>

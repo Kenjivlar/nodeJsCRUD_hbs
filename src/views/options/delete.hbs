@@ -1,0 +1,34 @@
+<h1 style="text-align: center;" class="m-3">Delete User</h1>
+
+<h2 style="text-align: center;" class="m-3">Do you really want to delete this User:</h2>
+
+<div class="container">
+ {{#each user}}
+	<form style="text-align: center;" action="" method="POST">
+        <div class="mb-3">
+          <label class="form-label">Id:</label>
+          <label><b>{{id}}</b></label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name:</label>
+          <label><b>{{nameu}}</b></label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Last Name:</label>
+            <label><b>{{lnameu}}</b></label>
+        </div>  
+        <div class="justify-content-center">
+        <button type="submit" class="btn btn-danger btn-lg">Yes</button>
+        &nbsp;
+        &nbsp;
+        <a href="/index" class="btn btn-primary btn-lg">No</a>
+        
+        </div>
+        
+      </form>
+      {{/each}}
+
+      {{!-- <button class="btn btn-primary"><a href=""></a></button> --}}
+      
+          
+</div>
